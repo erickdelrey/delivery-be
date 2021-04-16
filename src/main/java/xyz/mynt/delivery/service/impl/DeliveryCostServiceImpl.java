@@ -18,7 +18,7 @@ import xyz.mynt.delivery.service.DeliveryCostService;
 import xyz.mynt.delivery.service.VoucherRestClientService;
 
 @Service
-public class DeliveryCostImpl implements DeliveryCostService {
+public class DeliveryCostServiceImpl implements DeliveryCostService {
 
     @Autowired
     private DeliveryCostRuleConfig deliveryCostRuleConfig;
