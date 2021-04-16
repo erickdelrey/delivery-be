@@ -1,0 +1,12 @@
+@startuml
+DeliveryCostController -> DeliveryCostService : request
+DeliveryCostService -> DeliveryCostRuleConfig
+DeliveryCostRuleConfig -> DeliveryCostService : rule map
+DeliveryCostService -> DeliveryCostService : calculate cost based on appropriate rule
+alt voucher not blank
+  DeliveryCostService -> VocherRestClientService : voucherCode
+  VocherRestClientService -> DeliveryCostService : VoucherItem
+  DeliveryCostService -> DeliveryCostService : subtract cost with discount
+ end
+DeliveryCostService -> DeliveryCostController : response
+@enduml

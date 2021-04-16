@@ -1,0 +1,48 @@
+[
+  {
+    "priority": 1,
+    "ruleName": "Reject",
+    "measurement": "WEIGHT",
+    "condition": "GREATER_THAN",
+    "amount": 50,
+    "validForDelivery": false
+  },
+  {
+    "priority": 2,
+    "ruleName": "Heavy Parcel",
+    "measurement": "WEIGHT",
+    "condition": "GREATER_THAN",
+    "amount": 10,
+    "validForDelivery": true,
+    "costMultiplier" : 20,
+    "costMeasurement" : "WEIGHT"
+  },
+  {
+    "priority": 3,
+    "ruleName": "Small Parcel",
+    "measurement": "VOLUME",
+    "condition": "LESS_THAN",
+    "amount": 1500,
+    "validForDelivery": true,
+    "costMultiplier" : 0.03,
+    "costMeasurement" : "VOLUME"
+  },
+  {
+    "priority": 4,
+    "ruleName": "Medium Parcel",
+    "measurement": "VOLUME",
+    "condition": "LESS_THAN",
+    "amount": 2500,
+    "validForDelivery": true,
+    "costMultiplier" : 0.04,
+    "costMeasurement" : "VOLUME"
+  },
+  {
+    "priority": 5,
+    "ruleName": "Large Parcel",
+    "condition": "NONE",
+    "validForDelivery": true,
+    "costMultiplier" : 0.05,
+    "costMeasurement" : "VOLUME"
+  }
+]
